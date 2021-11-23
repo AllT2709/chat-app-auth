@@ -1,9 +1,5 @@
 import { login } from "../services/user";
 
-/* export const loginStart = () => ({
-  type: "LOGIN_START",
-});
- */
 export const loginStart = (dispatch) => {
   dispatch({
     type: "LOGIN_START",

@@ -5,12 +5,6 @@ const URL =
     ? "http://localhost:3000/api/messages"
     : "/api/messages";
 
-const config = {
-  headers: {
-    authorization: `Bearer ${localStorage.getItem("token")}`,
-  },
-};
-
 export const getMessages = async (conversationId) => {
   const { data } = await axios.get(`${URL}/${conversationId}`, {
     headers: {

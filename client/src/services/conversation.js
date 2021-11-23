@@ -5,11 +5,6 @@ const URL =
     ? "http://localhost:3000/api/conversations"
     : "/api/conversations";
 
-const config = {
-  headers: {
-    authorization: `Bearer ${localStorage.getItem("token")}`,
-  },
-};
 export const getConversations = async (userId) => {
   const { data } = await axios.get(`${URL}/${userId}`, {
     headers: {
